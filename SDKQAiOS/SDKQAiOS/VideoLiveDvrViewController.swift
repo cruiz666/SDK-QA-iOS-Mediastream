@@ -111,10 +111,12 @@ class VideoLiveDvrViewController: UIViewController {
         case 2: // DVR Start
             config.dvr = true
             config.dvrStart = dvrStartTime() // -1h30m UTC
+            NSLog("[SDK-QA] Video Live DVR - DVR Start: dvrStart = %@", config.dvrStart ?? "")
         case 3: // DVR VOD
             config.dvr = true
             config.dvrStart = dvrVodStartTime() // -30m UTC
             config.dvrEnd = dvrVodEndTime()     // -10m UTC
+            NSLog("[SDK-QA] Video Live DVR - DVR VOD: dvrStart = %@, dvrEnd = %@", config.dvrStart ?? "", config.dvrEnd ?? "")
         default:
             break
         }

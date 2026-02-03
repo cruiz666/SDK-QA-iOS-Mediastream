@@ -96,6 +96,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(VideoMixedViewController(), animated: true)
         case .videoMixedWithService:
             navigationController?.pushViewController(VideoMixedWithServiceViewController(), animated: true)
+        case .videoReels:
+            navigationController?.pushViewController(VideoReelsViewController(), animated: true)
         default:
             let detail = CaseDetailViewController()
             detail.testCase = testCase

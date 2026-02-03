@@ -40,6 +40,7 @@ struct TestCase {
         case videoLiveDvr
         case videoMixed
         case videoMixedWithService
+        case videoReels
     }
 
     /// Título para mostrar en la lista (categoría + título).
@@ -70,7 +71,8 @@ struct TestCase {
             TestCase(type: .videoLive, title: "Live Video", category: .video),
             TestCase(type: .videoLiveDvr, title: "Live Video DVR", category: .video),
             TestCase(type: .videoMixed, title: "Mixed Video", category: .video),
-            TestCase(type: .videoMixedWithService, title: "Mixed Video with Service", category: .video)
+            TestCase(type: .videoMixedWithService, title: "Mixed Video with Service", category: .video),
+            TestCase(type: .videoReels, title: "Reels", category: .video)
         ]
     }
 }
