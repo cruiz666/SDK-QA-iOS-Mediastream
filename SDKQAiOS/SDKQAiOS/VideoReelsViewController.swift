@@ -36,7 +36,7 @@ class VideoReelsViewController: UIViewController {
         mdstrm.didMove(toParent: self)
 
         NSLayoutConstraint.activate([
-            mdstrm.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            mdstrm.view.topAnchor.constraint(equalTo: view.topAnchor),
             mdstrm.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             mdstrm.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             mdstrm.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
