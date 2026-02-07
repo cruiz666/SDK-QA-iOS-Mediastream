@@ -80,6 +80,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(AudioMixedWithServiceViewController(), animated: true)
         case .videoVodSimple:
             navigationController?.pushViewController(VideoVodSimpleViewController(), animated: true)
+        case .videoSmallContainer:
+            navigationController?.pushViewController(VideoSmallContainerViewController(), animated: true)
         case .videoNextEpisode:
             navigationController?.pushViewController(VideoNextEpisodeViewController(), animated: true)
         case .videoLocal:
@@ -98,6 +100,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(VideoMixedWithServiceViewController(), animated: true)
         case .videoReels:
             navigationController?.pushViewController(VideoReelsViewController(), animated: true)
+        case .videoUILocalization:
+            navigationController?.pushViewController(VideoUILocalizationViewController(), animated: true)
         default:
             let detail = CaseDetailViewController()
             detail.testCase = testCase

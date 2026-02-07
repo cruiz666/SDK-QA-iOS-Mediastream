@@ -19,7 +19,7 @@ class VideoEpisodeViewController: UIViewController {
         view.backgroundColor = .black
 
         let playerConfig = MediastreamPlayerConfig()
-        playerConfig.id = "696808734a117b1460e8e4f8"
+        playerConfig.id = "6985311bd04b84ebf6400f24"
         playerConfig.type = .EPISODE
         playerConfig.showControls = true
         playerConfig.loadNextAutomatically = true

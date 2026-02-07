@@ -32,6 +32,7 @@ struct TestCase {
         case audioMixed
         case audioMixedWithService
         case videoVodSimple
+        case videoSmallContainer
         case videoNextEpisode
         case videoLocal
         case videoLocalWithService
@@ -41,6 +42,7 @@ struct TestCase {
         case videoMixed
         case videoMixedWithService
         case videoReels
+        case videoUILocalization
     }
 
     /// Título para mostrar en la lista (categoría + título).
@@ -64,6 +66,7 @@ struct TestCase {
             TestCase(type: .audioMixedWithService, title: "Mixed Audio with Service", category: .audio),
             // Video
             TestCase(type: .videoVodSimple, title: "VOD Simple", category: .video),
+            TestCase(type: .videoSmallContainer, title: "Small Container", category: .video),
             TestCase(type: .videoNextEpisode, title: "Next Episode", category: .video),
             TestCase(type: .videoLocal, title: "Local Video", category: .video),
             TestCase(type: .videoLocalWithService, title: "Local Video with Service", category: .video),
@@ -72,7 +75,8 @@ struct TestCase {
             TestCase(type: .videoLiveDvr, title: "Live Video DVR", category: .video),
             TestCase(type: .videoMixed, title: "Mixed Video", category: .video),
             TestCase(type: .videoMixedWithService, title: "Mixed Video with Service", category: .video),
-            TestCase(type: .videoReels, title: "Reels", category: .video)
+            TestCase(type: .videoReels, title: "Reels", category: .video),
+            TestCase(type: .videoUILocalization, title: "UI Localization", category: .video)
         ]
     }
 }
