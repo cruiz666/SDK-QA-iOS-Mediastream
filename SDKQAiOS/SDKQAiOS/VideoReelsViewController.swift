@@ -19,11 +19,11 @@ class VideoReelsViewController: UIViewController {
         view.backgroundColor = .black
 
         let playerConfig = MediastreamPlayerConfig()
-        playerConfig.id = "6772da3c808e6ac7b86edb06"
-        playerConfig.playerId = "677ee96edbb8fa932f3433cc"
+        playerConfig.id = "6927c03148be9c0e38442dc8"
+        playerConfig.playerId = "68c46249cf666688cb586a06"
         playerConfig.type = .VOD
         playerConfig.debug = true
-        playerConfig.environment = .DEV
+        //playerConfig.environment = .DEV
         playerConfig.trackEnable = false
         playerConfig.showDismissButton = true
         playerConfig.autoplay = true
