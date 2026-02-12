@@ -32,6 +32,7 @@ struct TestCase {
         case audioMixed
         case audioMixedWithService
         case videoVodSimple
+        case videoVodCast
         case videoSmallContainer
         case videoNextEpisode
         case videoLocal
@@ -66,6 +67,7 @@ struct TestCase {
             TestCase(type: .audioMixedWithService, title: "Mixed Audio with Service", category: .audio),
             // Video
             TestCase(type: .videoVodSimple, title: "VOD Simple", category: .video),
+            TestCase(type: .videoVodCast, title: "VOD Cast", category: .video),
             TestCase(type: .videoSmallContainer, title: "Small Container", category: .video),
             TestCase(type: .videoNextEpisode, title: "Next Episode", category: .video),
             TestCase(type: .videoLocal, title: "Local Video", category: .video),

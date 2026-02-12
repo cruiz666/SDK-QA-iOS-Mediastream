@@ -80,6 +80,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(AudioMixedWithServiceViewController(), animated: true)
         case .videoVodSimple:
             navigationController?.pushViewController(VideoVodSimpleViewController(), animated: true)
+        case .videoVodCast:
+            navigationController?.pushViewController(VideoVODCastViewController(), animated: true)
         case .videoSmallContainer:
             navigationController?.pushViewController(VideoSmallContainerViewController(), animated: true)
         case .videoNextEpisode:

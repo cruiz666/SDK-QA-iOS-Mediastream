@@ -6,14 +6,24 @@
 //
 
 import UIKit
+import GoogleCast
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Inicializar Cast (solo la app host tiene esta dependencia).
+        let appID = kGCKDefaultMediaReceiverApplicationID
+        print("Cast: Inicializando con receiver App ID: \(appID)")
+        let options = GCKCastOptions(discoveryCriteria: GCKDiscoveryCriteria(applicationID: appID))
+        GCKCastContext.setSharedInstanceWith(options)
+        print("Cast: GCKCastContext configurado correctamente.")
+
+        // Iniciar discovery al arranque para que iOS muestre el permiso "Red local"
+        // (igual que YouTube). Sin esto, el diálogo no aparece y no se descubren dispositivos.
+        GCKCastContext.sharedInstance().discoveryManager.startDiscovery()
+        print("Cast: Discovery iniciado al arranque (debería aparecer el permiso de Red local).")
+
         return true
     }
 
