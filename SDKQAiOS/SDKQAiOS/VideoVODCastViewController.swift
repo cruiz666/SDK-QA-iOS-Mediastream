@@ -15,12 +15,12 @@ class VideoVODCastViewController: UIViewController {
 
     private var sdk: MediastreamPlatformSDK?
     private var castButton: UIButton?
-    
+
     /// Banner que se muestra cuando hay una sesión Cast activa (nombre del dispositivo + Desconectar).
     private var castingBanner: UIView!
     private var castingLabel: UILabel!
     private var disconnectButton: UIButton!
-    
+
     /// Posición del Cast que usamos al desconectar para reanudar el player local (segundos).
     private var lastKnownCastPositionSeconds: TimeInterval = 0
     /// Al desconectar por botón, guardamos la posición antes de endSession para restaurar en didEndSession.
@@ -153,7 +153,7 @@ class VideoVODCastViewController: UIViewController {
         }
         isSyncingPlayPauseUIFromCast = false
     }
-    
+
     /// Muestra la pantalla de controles expandidos de Cast (volumen, detener). Bloquea la vista del player.
     private func showExpandedCastControls() {
         GCKCastContext.sharedInstance().presentDefaultExpandedMediaControls()
@@ -435,7 +435,7 @@ extension VideoVODCastViewController: GCKRemoteMediaClientListener {
             break
         }
     }
-    
+
     private func stringFromPlayerState(_ state: GCKMediaPlayerState) -> String {
         switch state {
         case .idle: return "idle"

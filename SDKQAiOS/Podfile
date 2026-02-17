@@ -6,7 +6,7 @@ target 'SDKQAiOS' do
   use_frameworks!
 
   # Pods for SDKQAiOS
-  pod 'MediastreamPlatformSDKxC', '~> 3.0.0-alpha.11'
+  pod 'MediastreamPlatformSDKxC', '~> 3.0.0-alpha.13'
   # Cast: solo la app host lo usa; el SDK no depende de él.
   pod 'google-cast-sdk'
 end
