@@ -61,6 +61,7 @@ class VideoLocalWithServiceViewController: UIViewController {
         ])
 
         mdstrm.setup(playerConfig)
+        SDKEventListeners.attachAll(to: mdstrm)
         mdstrm.play()
         sdk = mdstrm
     }

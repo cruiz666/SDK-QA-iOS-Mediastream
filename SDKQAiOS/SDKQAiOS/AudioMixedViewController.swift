@@ -98,6 +98,7 @@ class AudioMixedViewController: UIViewController {
         ])
 
         mdstrm.setup(config)
+        SDKEventListeners.attachAll(to: mdstrm)
         mdstrm.play()
     }
 

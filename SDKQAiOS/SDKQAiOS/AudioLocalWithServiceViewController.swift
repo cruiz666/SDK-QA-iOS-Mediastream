@@ -53,6 +53,7 @@ class AudioLocalWithServiceViewController: UIViewController {
         mdstrm.didMove(toParent: self)
 
         mdstrm.setup(playerConfig)
+        SDKEventListeners.attachAll(to: mdstrm)
         mdstrm.play()
         sdk = mdstrm
     }

@@ -83,6 +83,7 @@ class AudioLiveDvrViewController: UIViewController {
         ])
 
         mdstrm.setup(playerConfig)
+        SDKEventListeners.attachAll(to: mdstrm)
         mdstrm.play()
     }
 

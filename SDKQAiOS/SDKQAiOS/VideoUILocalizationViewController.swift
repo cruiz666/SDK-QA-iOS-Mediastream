@@ -84,6 +84,7 @@ class VideoUILocalizationViewController: UIViewController {
         ])
 
         mdstrm.setup(playerConfig)
+        SDKEventListeners.attachAll(to: mdstrm)
         mdstrm.play()
     }
 

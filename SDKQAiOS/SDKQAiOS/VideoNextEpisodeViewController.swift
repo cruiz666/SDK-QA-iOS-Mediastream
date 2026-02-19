@@ -4,6 +4,7 @@
 //
 //  Video Next Episode: mismo enfoque que Android VideoNextEpisodeActivity.
 //  Modos: Next Episode (episodio con siguiente desde API) y Next Episode Custom (VOD con cadena de IDs).
+//  Incluye soporte PiP + Control Center (canStartPictureInPictureAutomaticallyFromInline, updatesNowPlayingInfoCenter).
 //
 
 import UIKit
@@ -100,6 +101,7 @@ class VideoNextEpisodeViewController: UIViewController {
         ])
 
         mdstrm.setup(config)
+        SDKEventListeners.attachAll(to: mdstrm)
         mdstrm.play()
         setupNextEpisodeIncomingListener(for: "NEXT_EPISODE")
         updateButtonStates()
@@ -128,6 +130,8 @@ class VideoNextEpisodeViewController: UIViewController {
         let config = MediastreamPlayerConfig()
         config.debug = true
         config.customUI = true
+        config.updatesNowPlayingInfoCenter = true
+        config.canStartPictureInPictureAutomaticallyFromInline = true
 
         if mode == "NEXT_EPISODE" {
             config.id = Self.nextEpisodeId
@@ -159,6 +163,8 @@ class VideoNextEpisodeViewController: UIViewController {
                 nextConfig.environment = .PRODUCTION
                 nextConfig.debug = true
                 nextConfig.customUI = true
+                nextConfig.updatesNowPlayingInfoCenter = true
+                nextConfig.canStartPictureInPictureAutomaticallyFromInline = true
                 if nextIndex < self.nextEpisodeIds.count {
                     nextConfig.nextEpisodeId = self.nextEpisodeIds[nextIndex]
                 }

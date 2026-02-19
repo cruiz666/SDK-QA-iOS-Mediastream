@@ -2,7 +2,7 @@ PODS:
   - ComScore (6.15.0)
   - google-cast-sdk (4.8.4)
   - GoogleAds-IMA-iOS-SDK (3.24.0)
-  - MediastreamPlatformSDKxC (3.0.0-alpha.13):
+  - MediastreamPlatformSDKxC (3.0.0-alpha.14):
     - ComScore (~> 6.15.0)
     - GoogleAds-IMA-iOS-SDK (= 3.24.0)
     - YouboraAVPlayerAdapter (= 6.3.5)
@@ -13,7 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - google-cast-sdk
-  - MediastreamPlatformSDKxC (~> 3.0.0-alpha.13)
+  - MediastreamPlatformSDKxC (~> 3.0.0-alpha.14)
 
 SPEC REPOS:
   trunk:
@@ -28,10 +28,10 @@ SPEC CHECKSUMS:
   ComScore: 152be249b930a8da0d59d8468b63e25a6713bcf5
   google-cast-sdk: 32f65af50d164e3c475e79ad123db3cc26fbcd37
   GoogleAds-IMA-iOS-SDK: bf4dc86b31a1d1b27021008200bbeb6faa689901
-  MediastreamPlatformSDKxC: fdf7fc228ddb97ff032ffc076a900817708c2510
+  MediastreamPlatformSDKxC: eca938b1a87ebb20fbd2737357e9ce114da46455
   YouboraAVPlayerAdapter: 18c4c75ad2b43fb27f043ae23f1c979c3076ce7a
   YouboraLib: bee6890fb6cf8c4e8ff30a6462bc9692347e28ff
 
-PODFILE CHECKSUM: 59478928a73045f6c28d1423aa009399f42d2e0b
+PODFILE CHECKSUM: 01f7ea9e4683cc2e53ab2d6a8ab23a083ea28fb8
 
 COCOAPODS: 1.16.2
