@@ -11,7 +11,7 @@ import MediastreamPlatformSDKiOS
 
 class VideoLiveDvrViewController: UIViewController {
 
-    private let baseId = "6824d425c3ae719205f54245"
+    private let baseId = "69bab9aba2034bd4405095d0"
     private let modes = ["Live", "DVR", "DVR Start", "DVR VOD"]
 
     private var sdk: MediastreamPlatformSDK?
@@ -102,13 +102,14 @@ class VideoLiveDvrViewController: UIViewController {
         config.showControls = true
         config.debug = true
         config.customUI = true
-        // config.environment = .DEV
+        config.environment = .DEV
 
         switch index {
         case 0: // Live
             break
         case 1: // DVR (ventana desde plataforma)
             config.dvr = true
+            NSLog("[SDK-QA] Simple DVR")
         case 2: // DVR Start
             config.dvr = true
             config.dvrStart = dvrStartTime() // -1h30m UTC

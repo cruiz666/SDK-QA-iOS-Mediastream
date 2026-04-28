@@ -19,10 +19,11 @@ class VideoLiveViewController: UIViewController {
         view.backgroundColor = .black
 
         let playerConfig = MediastreamPlayerConfig()
-        playerConfig.id = "6824d425c3ae719205f54245"
+        playerConfig.id = "67da2962c4eed1a805b30e61"
         playerConfig.type = .LIVE
         playerConfig.debug = true
         playerConfig.customUI = true
+        playerConfig.accessToken = "cBvgGKrQyREip9M1x2jqoUw8adwkTB5OPYZ2T9DBOTq1tKFqzcCBryruXT6wPPUdRaa2iMfjIYRJ"
         // Descomentar para entorno de desarrollo:
         // playerConfig.environment = .DEV
 

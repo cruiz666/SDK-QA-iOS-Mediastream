@@ -44,6 +44,12 @@ class VideoVODCastViewController: UIViewController {
         castButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
         castButton.addTarget(self, action: #selector(castButtonTapped), for: .touchUpInside)
         self.castButton = castButton
+        
+        let airplayButton = UIButton(type: .system)
+        airplayButton.setImage(UIImage(systemName: "tv"), for: .normal)
+        airplayButton.tintColor = .white
+        airplayButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        airplayButton.addTarget(self, action: #selector(castButtonTapped), for: .touchUpInside)
 
         let playerConfig = MediastreamPlayerConfig()
         playerConfig.id = "685be889d76b0da57e68620e"
@@ -52,6 +58,9 @@ class VideoVODCastViewController: UIViewController {
         playerConfig.customUI = true
         playerConfig.showCastButton = true
         playerConfig.useCustomCastButton = castButton
+        playerConfig.showAirPlayButton = true
+        //playerConfig.airPlayButtonMode = .hostProvided
+        //playerConfig.shouldManageAudioSession = true
         // Descomentar para entorno de desarrollo:
         // playerConfig.environment = .DEV
 
@@ -79,6 +88,14 @@ class VideoVODCastViewController: UIViewController {
         setupSDKPlayPauseListeners()
         setupCastDiscoveryLogs()
     }
+    
+/*       func createAirPlayButtonFromSDK() {
+        let airPlayButton = sdk?.getAirPlayButtonView()
+        airPlayButton.frame = CGRect(x: 20, y: 50, width: 40, height: 40)
+        airPlayButton.activeTintColor = .systemBlue
+        airPlayButton.tintColor = .systemGray
+        mainContainer.addSubview(airPlayButton)
+    }*/
 
     /// Reenvía play/pause del player al Cast cuando hay sesión activa (modo casting: el SDK solo emite eventos).
     /// No reenvía cuando estamos sincronizando la UI desde el estado de Cast (isSyncingPlayPauseUIFromCast).

@@ -34,6 +34,7 @@ struct TestCase {
         case videoVodSimple
         case videoVodCast
         case videoSmallContainer
+        case videoSmallContainerRotation
         case videoNextEpisode
         case videoLocal
         case videoLocalWithService
@@ -69,6 +70,7 @@ struct TestCase {
             TestCase(type: .videoVodSimple, title: "VOD Simple", category: .video),
             TestCase(type: .videoVodCast, title: "VOD Cast", category: .video),
             TestCase(type: .videoSmallContainer, title: "Small Container", category: .video),
+            TestCase(type: .videoSmallContainerRotation, title: "Small Container + Rotation", category: .video),
             TestCase(type: .videoNextEpisode, title: "Next Episode", category: .video),
             TestCase(type: .videoLocal, title: "Local Video", category: .video),
             TestCase(type: .videoLocalWithService, title: "Local Video with Service", category: .video),

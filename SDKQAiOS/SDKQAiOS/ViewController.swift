@@ -84,6 +84,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(VideoVODCastViewController(), animated: true)
         case .videoSmallContainer:
             navigationController?.pushViewController(VideoSmallContainerViewController(), animated: true)
+        case .videoSmallContainerRotation:
+            navigationController?.pushViewController(VideoSmallContainerRotationViewController(), animated: true)
         case .videoNextEpisode:
             navigationController?.pushViewController(VideoNextEpisodeViewController(), animated: true)
         case .videoLocal:

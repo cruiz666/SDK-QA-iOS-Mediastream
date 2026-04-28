@@ -19,10 +19,14 @@ class AudioLiveViewController: UIViewController {
         view.backgroundColor = .black
 
         let playerConfig = MediastreamPlayerConfig()
-        playerConfig.id = "5c915724519bce27671c4d15"
+        playerConfig.id = "632c9b23d1dcd7027f32f7fe"
         playerConfig.type = .LIVE
         playerConfig.debug = true
-        playerConfig.customUI = true
+        //playerConfig.customUI = true
+        playerConfig.showControls = false
+        playerConfig.dvr = true
+        playerConfig.dvrStart = "2026-02-26T16:00:00.000Z"
+        //playerConfig.adURL = "no-ads"
         // Descomentar para entorno de desarrollo:
         // playerConfig.environment = .DEV
 
